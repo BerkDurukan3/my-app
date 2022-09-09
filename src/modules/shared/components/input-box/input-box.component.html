@@ -1,7 +1,9 @@
-<div style="margin-left: 50px; margin-right: 50px; display: flex;">
+<div style="margin-left: 50px; margin-right: 50px; display: flex;" [formGroup] = "parentForm">
   <div style="width: 70px; text-align: right; margin-right: 10px; font-weight: bold;">{{name}}</div>
-  <input matInput>
+  <input type={{type}} matInput [formControlName]="myFormControlName">
 </div>
+
+
 
 
 

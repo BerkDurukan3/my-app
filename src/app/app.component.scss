@@ -8,13 +8,13 @@
   padding-bottom: 20px;
 }
 
-.main-container{
+.main-container {
   display: flex;
   padding: 50px;
   gap: 20px;
 }
 
-.user-info-text{
+.user-info-text {
   margin-left: 10px;
   margin-top: -10px;
   margin-bottom: 20px;
@@ -23,8 +23,8 @@
   align-self: flex-start;
 }
 
-@media screen and (min-width:0px) and (max-width:830px){
-  .main-container{
+@media screen and (min-width: 0px) and (max-width: 830px) {
+  .main-container {
     flex-wrap: wrap;
   }
 }

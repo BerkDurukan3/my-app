@@ -1,22 +1,17 @@
 <div class="main-container">
-  <div class="user-container">
+  <div class="user-container" [formGroup] = "parentForm">
     <div class="user-info-text">Müstahsilin Bilgileri</div>
-    <app-input-box [name]="'TCKN *'"></app-input-box>
-    <app-input-box [name]="'Adı *'"></app-input-box>
-    <app-input-box [name]="'Soyadı *'"></app-input-box>
-    <app-dropdown [name]="'Şehir '"></app-dropdown>
-    <app-input-box [name]="'Web Sitesi'"></app-input-box>
+    <app-input-box [type]="'number'" [name]="'TCKN *'" [parentForm]="parentForm" [myFormControlName]="'tckn'"></app-input-box>
+    <app-input-box [name]="'Adı *'" [parentForm]="parentForm" [myFormControlName]="'name'"></app-input-box>
+    <app-input-box [name]="'Soyadı *'" [parentForm]="parentForm" [myFormControlName]="'surname'"></app-input-box>
+    <app-dropdown [name]="'Şehir '" [parentForm]="parentForm" [myFormControlName]="'city'"></app-dropdown>
+    <app-input-box [name]="'Web Sitesi'" [parentForm]="parentForm" [myFormControlName]="'site'"></app-input-box>
+    <button style="margin: 20px;" [disabled]="parentForm.invalid" (click)="onClick()">Submit</button>
   </div>
   <div class="user-container">
     <div class="user-info-text">Müstahsil Bilgileri</div>
-    <app-input-text
-      [name]="'ETTN'"
-      [content]="'5184117c-8626-493c-b848-24c76a7ac5da'"
-    ></app-input-text>
-    <app-input-text
-      [name]="'Belge Numarası'"
-      [content]="'-----'"
-    ></app-input-text>
+    <app-input-text [name]="'ETTN'" [content]="'5184117c-8626-493c-b848-24c76a7ac5da'"></app-input-text>
+    <app-input-text [name]="'Belge Numarası'" [content]="'-----'"></app-input-text>
     <app-icon-box [name]="'Düzenlenme Tarihi'" [content]="'09/09/2022'"></app-icon-box>
     <app-icon-box [name]="'Düzenlenme Saati'" [content]="'09:55:40'"></app-icon-box>
   </div>

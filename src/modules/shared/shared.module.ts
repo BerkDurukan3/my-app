@@ -7,12 +7,13 @@ import {MatSelectModule} from '@angular/material/select';
 import { InputTextComponent } from './components/input-text/input-text.component';
 import { IconBoxComponent } from './components/icon-box/icon-box.component';
 import {MatIconModule} from '@angular/material/icon';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
 @NgModule({
   declarations: [InputBoxComponent, DropdownComponent, InputTextComponent, IconBoxComponent],
-  imports: [CommonModule,MatFormFieldModule,MatSelectModule,MatIconModule],
+  imports: [CommonModule,MatFormFieldModule,MatSelectModule,MatIconModule,ReactiveFormsModule],
   exports: [InputBoxComponent, DropdownComponent, InputTextComponent, IconBoxComponent],
 })
 export class SharedModule {}
